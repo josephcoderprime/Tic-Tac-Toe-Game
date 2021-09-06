@@ -12,7 +12,8 @@ body {
 }
 
 .select-box,
-.play-board {
+.play-board,
+.result-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -29,7 +30,7 @@ body {
   border-radius: 5px;
   max-width: 330px;
   width: 100%;
-  display: none;
+  /* display: none; */
 }
 
 .select-box header {
@@ -64,7 +65,8 @@ body {
   transition: all 0.3s ease;
 }
 
-.options button:hover {
+.options button:hover,
+.result-box .btn button:hover {
   transform: scale(0.96);
 }
 
@@ -74,6 +76,10 @@ body {
 
 .options button.playerO {
   margin-left: 5px;
+}
+
+.play-board {
+  display: none;
 }
 
 .play-board .details {
@@ -133,4 +139,43 @@ body {
   text-align: center;
   line-height: 80px;
   color: #56baed;
+}
+
+.result-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 350px;
+  width: 100%;
+  display: none;
+}
+
+.result-box .won-text {
+  font-size: 25px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+
+.result-box .won-text p {
+  font-weight: 600;
+  margin: 0 5px;
+}
+.result-box .btn {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.result-box .btn button {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: none;
+  outline: none;
+  background: #4786e4;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
